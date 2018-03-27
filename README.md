@@ -14,4 +14,4 @@ This LDD has been built for the following versions of the PDS4 information model
 - [1.7.0.0](build/1.7.0.0)
 - [1.8.0.0](build/1.8.0.0)
 - [1.9.0.0](build/1.9.0.0)
-	- package: [v1.9.0.0](https://github.com/nasa-pds/ldd-wave/releases/tag/v1.9.0.0)
+	- package: [v1.9.0.0](https://github.com/nasa-pds/ldd-particle/releases/tag/v1.9.0.0)
