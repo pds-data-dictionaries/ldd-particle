@@ -180,6 +180,9 @@
 		<local_identifier>particle.Particle_Observation</local_identifier>
 		<submitter_name>Todd King</submitter_name>
 		<definition>The Particle_Observation describes the data of a observation and the values which are associated with the elements along an axis or on the face of a observation data array.</definition>
+		<abstract_flag>false</abstract_flag>
+        <element_flag>true</element_flag> 
+
 		<DD_Association>
 			<local_identifier>pds.name</local_identifier>
 			<reference_type>attribute_of</reference_type>

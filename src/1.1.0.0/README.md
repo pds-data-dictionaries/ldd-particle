@@ -92,6 +92,8 @@ The local_reference_type attribute provides the name of an association between a
 Type: ASCII_Short_String_Collapsed  
 Units: Units_of_None  
 
+**Permissible Values**
+
 Name                                    | Description
 --------------------------------------- | ----------------------------
 particle_observation_to_observation_values | A reference to the array containing the primary observation data.
