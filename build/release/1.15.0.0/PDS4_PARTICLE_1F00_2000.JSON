@@ -2,9 +2,11 @@
   {
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.14.0.0" ,
-      "Date": "Wed Feb 24 22:40:28 UTC 2021" ,
+      "IM Version": "1.15.0.0" ,
+      "LDD Version": "2.0.0.0" ,
+      "Date": "Tue May 04 04:55:48 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
+      "namespaces": ["pds:", "particle:"] ,
       "classDictionary": [
         {
           "class": {
@@ -141,7 +143,7 @@
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "particle" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
+            "versionId": "1.15" ,
             "description": "The energy_range_minimum attribute indicates the highest measured energy for the described particle_type." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
@@ -166,7 +168,7 @@
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "particle" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
+            "versionId": "1.15" ,
             "description": "The energy_range_minimum attribute indicates the lowest measured energy for the described particle_type." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
@@ -191,7 +193,7 @@
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "particle" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
+            "versionId": "1.15" ,
             "description": "The ion_type attribute indicates the types of ions measured." ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
@@ -236,7 +238,7 @@
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "particle" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
+            "versionId": "1.15" ,
             "description": "The particle_measurement_type attribute indicates the type of particle measurement parameters." ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
@@ -353,7 +355,7 @@
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "particle" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
+            "versionId": "1.15" ,
             "description": "The particle_type attribute indicates the type of particle being described." ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
