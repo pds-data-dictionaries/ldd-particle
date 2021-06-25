@@ -11,6 +11,7 @@
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Density","Value","Density","","","Particle number or mass density"
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Distribution Functio","Value","Distribution Function","","","Particle distribution"
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Dynamic Pressure","Value","Dynamic Pressure","","","Pressure due to the kinetic motion of the particles"
+"particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Energy Flux","Value","Energy Flux","","","Particle energy per unit area per time. This value should be used for differential and integral energy flux as well."
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Energy Spectra","Value","Energy Spectra","","","Particle distribution of energy"
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Flux","Value","Flux","","","Particle detections per time per area"
 "particle:Particle_Parameter:2             particle:particle_measurement_type:2      Value:Mass Spectra","Value","Mass Spectra","","","Particle distribution of mass-to-charge ratio"

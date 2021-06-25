@@ -2,15 +2,15 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        13.0.2
-   LDD Version Id:        2.0.0.0
+   LDD Version Id:        2.0.1.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue May 04 05:13:10 UTC 2021
-   Common Schema          [PDS4_PDS_1G00.xsd]
-   Common Schematron      [PDS4_PDS_1G00.sch]
-   IM Version Id:         1.16.0.0
+   Time                   Fri Jun 25 18:45:00 UTC 2021
+   Common Schema          [PDS4_PDS_1F00.xsd]
+   Common Schematron      [PDS4_PDS_1F00.sch]
+   IM Version Id:         1.15.0.0
    IM Namespace Id:       pds
    IM Label Version Id:   1.0
    IM Object Model        [UpperModel.pont]
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Particle
-   LDD Version            2.0.0.0
+   LDD Version            2.0.1.0
    Full Name              Joseph Mafi
    Steward                ppi
    Namespace Id           particle
@@ -60,6 +60,11 @@ Parsed Input - Header:
 		2.0.0.0 (J. Mafi, 2021-02-24):
 		   - Removed classes related to multidimensional data objects.
 		   - Added particle data parameter description attributes and classes.
+		   
+		2.0.1.0 (J. Mafi, 2021-06-24):
+		   - Updated to IM V.1.16.0.0
+		   - Added permissible value "Energy Flux" to 
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
 	
    Last Modification Time 2015-06-12T12:00:00Z
    PDS4 Merge Flag        false
@@ -67,29 +72,29 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   particle_type
-   version                1.16
+   version                1.15
    value data type        ASCII_Short_String_Collapsed
    description            The particle_type attribute indicates the type of particle being described.
 
    name                   energy_range_minimum
-   version                1.16
+   version                1.15
    value data type        ASCII_Real
    description            The energy_range_minimum attribute indicates the lowest measured energy for the described particle_type.
    unit of measure type   Units_of_Energy
 
    name                   energy_range_maximum
-   version                1.16
+   version                1.15
    value data type        ASCII_Real
    description            The energy_range_minimum attribute indicates the highest measured energy for the described particle_type.
    unit of measure type   Units_of_Energy
 
    name                   particle_measurement_type
-   version                1.16
+   version                1.15
    value data type        ASCII_Short_String_Collapsed
    description            The particle_measurement_type attribute indicates the type of particle measurement parameters.
 
    name                   ion_type
-   version                1.16
+   version                1.15
    value data type        ASCII_Short_String_Collapsed
    description            The ion_type attribute indicates the types of ions measured.
 

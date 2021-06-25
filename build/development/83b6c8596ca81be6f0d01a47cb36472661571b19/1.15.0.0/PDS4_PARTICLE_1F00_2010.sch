@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.0.0 - Tue May 04 05:13:10 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
+  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.1.0 - Fri Jun 25 18:45:00 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -41,9 +41,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="particle:Particle_Parameter/particle:particle_measurement_type">
-      <sch:assert test=". = ('Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')">
+      <sch:assert test=". = ('Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')">
         <title>particle:Particle_Parameter/particle:particle_measurement_type/particle:particle_measurement_type</title>
-        The attribute particle:particle_measurement_type must be equal to one of the following values 'Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity'.</sch:assert>
+        The attribute particle:particle_measurement_type must be equal to one of the following values 'Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
