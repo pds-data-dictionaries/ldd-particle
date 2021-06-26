@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:particle  Version:2.0.0.0 - Tue May 04 05:13:07 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 XML/Schema for Name Space Id:particle  Version:2.0.1.0 - Sat Jun 26 19:04:59 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.14.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 2.0.0.0 - particle: - Particle                                            -->
+  <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 2.0.1.0 - particle: - Particle                                            -->
   <!--   file:/home/runner/work/ldd-particle/ldd-particle/src/PDS4_PARTICLE_Inge -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -14,9 +14,9 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="2.0.0.0">
+    version="2.0.1.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -36,6 +36,11 @@
 		2.0.0.0 (J. Mafi, 2021-02-24):
 		   - Removed classes related to multidimensional data objects.
 		   - Added particle data parameter description attributes and classes.
+		   
+		2.0.1.0 (J. Mafi, 2021-06-24):
+		   - Updated to IM V.1.16.0.0
+		   - Added permissible value "Energy Flux" to 
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
 	
     </xs:documentation>
   </xs:annotation>
@@ -68,7 +73,7 @@
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="particle:particle_type = ('Electrons', 'Ions', 'Neutrals')"/> -->
-    <!-- <xs:assert test="particle:particle_measurement_type = ('Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')"/> -->
+    <!-- <xs:assert test="particle:particle_measurement_type = ('Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')"/> -->
     <!-- <xs:assert test="particle:ion_type = ('Alpha', 'Heavy', 'Proton')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
