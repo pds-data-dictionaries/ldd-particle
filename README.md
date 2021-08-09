@@ -1,7 +1,6 @@
 # Particle local data dictionary
 
-The Particle dictionary contains classes that describe the composition of multidimensional
-wave data consisting of Array (and Array subclass) data objects.
+The Particle dictionary contains attributes that may be used to help identify particle parameters included in a PDS4 product to supplement the information provided in the Primary_Result_Summary and in order to support enhanced data discovery.
 
 ## Versions
 
