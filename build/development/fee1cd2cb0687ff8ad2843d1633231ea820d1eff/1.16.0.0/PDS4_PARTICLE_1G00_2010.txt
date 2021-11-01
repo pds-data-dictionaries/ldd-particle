@@ -1,18 +1,18 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        13.1.0
+   LDDTool Version        10.0.0
    LDD Version Id:        2.0.1.0
-   LDD Label Version Id:  1.23
+   LDD Label Version Id:  1.22
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Sun Oct 31 23:22:42 UTC 2021
-   Common Schema          [PDS4_PDS_1H00.xsd]
-   Common Schematron      [PDS4_PDS_1H00.sch]
-   IM Version Id:         1.17.0.0
+   Time                   Mon Nov 01 06:46:17 UTC 2021
+   Common Schema          [PDS4_PDS_1G00.xsd]
+   Common Schematron      [PDS4_PDS_1G00.sch]
+   IM Version Id:         1.16.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.23
+   IM Label Version Id:   1.22
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -72,29 +72,29 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   particle_type
-   version                1.17
+   version                1.16
    value data type        ASCII_Short_String_Collapsed
    description            The particle_type attribute indicates the type of particle being described.
 
    name                   energy_range_minimum
-   version                1.17
+   version                1.16
    value data type        ASCII_Real
    description            The energy_range_minimum attribute indicates the lowest measured energy for the described particle_type.
    unit of measure type   Units_of_Energy
 
    name                   energy_range_maximum
-   version                1.17
+   version                1.16
    value data type        ASCII_Real
    description            The energy_range_minimum attribute indicates the highest measured energy for the described particle_type.
    unit of measure type   Units_of_Energy
 
    name                   particle_measurement_type
-   version                1.17
+   version                1.16
    value data type        ASCII_Short_String_Collapsed
    description            The particle_measurement_type attribute indicates the type of particle measurement parameters.
 
    name                   ion_type
-   version                1.17
+   version                1.16
    value data type        ASCII_Short_String_Collapsed
    description            The ion_type attribute indicates the types of ions measured.
 
