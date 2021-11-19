@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.1.0 - Thu Aug 05 21:40:47 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
+  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.1.0 - Mon Nov 01 15:18:44 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -36,21 +36,21 @@
     <sch:rule context="particle:Particle_Parameter/particle:ion_type">
       <sch:assert test=". = ('Alpha', 'Heavy', 'Proton')">
         <title>particle:Particle_Parameter/particle:ion_type/particle:ion_type</title>
-        The attribute particle:ion_type must be equal to one of the following values 'Alpha', 'Heavy', 'Proton'.</sch:assert>
+        The attribute particle:Particle_Parameter/particle:ion_type must be equal to one of the following values 'Alpha', 'Heavy', 'Proton'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="particle:Particle_Parameter/particle:particle_measurement_type">
       <sch:assert test=". = ('Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')">
         <title>particle:Particle_Parameter/particle:particle_measurement_type/particle:particle_measurement_type</title>
-        The attribute particle:particle_measurement_type must be equal to one of the following values 'Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity'.</sch:assert>
+        The attribute particle:Particle_Parameter/particle:particle_measurement_type must be equal to one of the following values 'Composition', 'Count Rate', 'Counts', 'Density', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="particle:Particle_Parameter/particle:particle_type">
       <sch:assert test=". = ('Electrons', 'Ions', 'Neutrals')">
         <title>particle:Particle_Parameter/particle:particle_type/particle:particle_type</title>
-        The attribute particle:particle_type must be equal to one of the following values 'Electrons', 'Ions', 'Neutrals'.</sch:assert>
+        The attribute particle:Particle_Parameter/particle:particle_type must be equal to one of the following values 'Electrons', 'Ions', 'Neutrals'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
