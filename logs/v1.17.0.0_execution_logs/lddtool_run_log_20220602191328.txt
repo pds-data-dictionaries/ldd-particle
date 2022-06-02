@@ -1,21 +1,19 @@
 
->>  INFO LDDTOOL Version: 13.1.0
+>>  INFO LDDTOOL Version: 10.0.0
 >>  INFO IM Version Id: 1.17.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.23
->>  INFO Date: Mon Nov 01 15:18:44 UTC 2021
->>  INFO PARENT_DIR: /tmp/lddtool-13.1.0
->>  INFO SCRIPT_DIR: /tmp/lddtool-13.1.0/bin
->>  INFO LIB_DIR: /tmp/lddtool-13.1.0/lib
+>>  INFO Date: Thu Jun 02 19:13:29 UTC 2022
+>>  INFO PARENT_DIR: /tmp/lddtool-14.0.1
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.0.1/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.0.1/lib
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:particle
 >>> INFO Init:  - Config.Properties Namespace Id Using:particle
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
->>> WARNING Header:  - New steward has been specified:ppi
->>> WARNING Header:  - New namespace id has been specified:particle
 
  -- LDDTool Execution Summary --
-     2 warning(s)
+     0 warning(s)
      0 error(s)
      0 fatal error(s)
 
@@ -24,6 +22,7 @@ Input:
      - IM Version: 1H00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-particle/ldd-particle/src/PDS4_PARTICLE_IngestLDD.xml
