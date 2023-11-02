@@ -1,0 +1,37 @@
+
+>>  INFO LDDTOOL Version: 14.3.0
+>>  INFO IM Version Id: 1.18.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.24
+>>  INFO Date: Thu Nov 02 23:35:02 UTC 2023
+>>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:particle
+>>> INFO Init:  - Config.Properties Namespace Id Using:particle
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+
+ -- LDDTool Execution Summary --
+     0 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1I00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-particle/ldd-particle/src/PDS4_PARTICLE_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_PARTICLE_1I00_2010.xsd
+     - ./PDS4_PARTICLE_1I00_2010.sch
+     - ./PDS4_PARTICLE_1I00_2010.xml
+     - ./export/JSON/PDS4_PDS_1I00.JSON
+
+>>  INFO Exit(0)
