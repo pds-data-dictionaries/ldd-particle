@@ -43,6 +43,10 @@
 		2.0.2.0 (J. Mafi, 2024-09-27):
 		   - Added permissible value "Density Profile" to
 		     Particle_Observation/Particle_Parameter/particle_measurement_type
+		     
+		2.0.3.0 (J. Mafi, 2025-07-11):
+		   - Added permissible value "Current" to 
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
 	</comment>
 	<last_modification_date_time>2024-09-27T23:00:00Z</last_modification_date_time>
 
@@ -176,7 +180,11 @@
 			<DD_Permissible_Value>
 				<value>Density Profile</value>
 				<value_meaning>Particle density by altitude</value_meaning>
-			</DD_Permissible_Value>			
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Current</value>
+				<value_meaning>Current produced by particle impacts on detector</value_meaning>
+			</DD_Permissible_Value>
 		</DD_Value_Domain>
 	</DD_Attribute>
 	
