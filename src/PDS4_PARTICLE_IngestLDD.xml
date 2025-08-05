@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model
-    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch"
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <!-- PDS4 Local Data Dictionary Ingest File -->
@@ -10,10 +10,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://pds.nasa.gov/pds4/pds/v1 
-        http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd ">
+        http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.xsd ">
 
 	<name>Particle</name>
-	<ldd_version_id>2.0.2.0</ldd_version_id>
+	<ldd_version_id>2.0.3.0</ldd_version_id>
 	<dictionary_type>Discipline</dictionary_type>
 	<full_name>Joseph Mafi</full_name>
 	<steward_id>ppi</steward_id>
@@ -42,6 +42,10 @@
 		
 		2.0.2.0 (J. Mafi, 2024-09-27):
 		   - Added permissible value "Density Profile" to
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
+		     
+		2.0.3.0 (J. Mafi, 2025-07-11):
+		   - Added permissible value "Current" to 
 		     Particle_Observation/Particle_Parameter/particle_measurement_type
 	</comment>
 	<last_modification_date_time>2024-09-27T23:00:00Z</last_modification_date_time>
@@ -176,7 +180,11 @@
 			<DD_Permissible_Value>
 				<value>Density Profile</value>
 				<value_meaning>Particle density by altitude</value_meaning>
-			</DD_Permissible_Value>			
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>Current</value>
+				<value_meaning>Current produced by particle impacts on detector</value_meaning>
+			</DD_Permissible_Value>
 		</DD_Value_Domain>
 	</DD_Attribute>
 	

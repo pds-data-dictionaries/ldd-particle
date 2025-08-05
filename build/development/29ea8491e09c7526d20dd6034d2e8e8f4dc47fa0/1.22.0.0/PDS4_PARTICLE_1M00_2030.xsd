@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- PDS4 XML/Schema for Name Space Id:particle  Version:2.0.3.0 - Fri Jul 11 23:25:56 UTC 2025 -->
+  <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
+  <!-- *** This PDS4 product schema is an operational deliverable. *** -->
+  <!--                                                                           -->
+  <!--               Dictionary Stack                                            -->
+  <!-- 1.22.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 2.0.3.0 - particle: - Particle                                            -->
+  <!--                                                                           -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://pds.nasa.gov/pds4/particle/v2"
+    xmlns:particle="http://pds.nasa.gov/pds4/particle/v2"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0.3.0">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd"/>
+ 
+  <xs:annotation>
+    <xs:documentation>
+
+		This is an Ingest LDD file for the Particle Discipline Local Data Dictionary. It contains attributes 
+		that may be used to help identify particle parameters included in a PDS4 product to supplement the 
+		information provided in the Primary_Result_Summary and in order to support enhanced data discovery.
+		
+		Modification History:
+		
+		1.0.0.0 (Todd King)
+		   - Initial version. Included classes for defining relationships between multidimensional data 
+		     objects (subsequently moved to the Multidimensional dictionary).
+		     
+		1.1.0.0 (Todd King)
+		
+		2.0.0.0 (J. Mafi, 2021-02-24):
+		   - Removed classes related to multidimensional data objects.
+		   - Added particle data parameter description attributes and classes.
+		   
+		2.0.1.0 (J. Mafi, 2021-06-24):
+		   - Updated to IM V.1.16.0.0
+		   - Added permissible value "Energy Flux" to 
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
+		
+		2.0.2.0 (J. Mafi, 2024-09-27):
+		   - Added permissible value "Density Profile" to
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
+		     
+		2.0.3.0 (J. Mafi, 2025-07-11):
+		   - Added permissible value "Current" to 
+		     Particle_Observation/Particle_Parameter/particle_measurement_type
+	
+    </xs:documentation>
+  </xs:annotation>
+ 
+  <xs:element name="Particle_Observation" type="particle:Particle_Observation"> </xs:element>
+
+  <xs:complexType name="Particle_Observation">
+    <xs:annotation>
+      <xs:documentation>The Particle_Observation class is the container
+        for particle discipline related metadata
+        elements.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="energy_range_minimum" type="particle:energy_range_minimum" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="energy_range_maximum" type="particle:energy_range_maximum" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Particle_Parameter" type="particle:Particle_Parameter" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Particle_Parameter">
+    <xs:annotation>
+      <xs:documentation>The Particle_Parameter class contains metadata
+        identifying specific particle science
+        parameters.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="particle_type" type="particle:particle_type" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="particle_measurement_type" type="particle:particle_measurement_type" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="ion_type" type="particle:ion_type" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="particle:particle_type = ('Electrons', 'Ions', 'Neutrals')"/> -->
+    <!-- <xs:assert test="particle:particle_measurement_type = ('Composition', 'Count Rate', 'Counts', 'Current', 'Density', 'Density Profile', 'Distribution Function', 'Dynamic Pressure', 'Energy Flux', 'Energy Spectra', 'Flux', 'Mass Spectra', 'Pitch Angle Distribution', 'Pulse Height Analysis', 'Temperature', 'Thermal Pressure', 'Time of Flight', 'Velocity')"/> -->
+    <!-- <xs:assert test="particle:ion_type = ('Alpha', 'Heavy', 'Proton')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
+        than those at the base data type level. The simpleTypes defined here build on the base data
+        types. This is another component of the common dictionary and therefore falls within the
+        common namespace.
+      </xs:documentation>
+    </xs:annotation>
+
+  <xs:simpleType name="energy_range_maximum_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="energy_range_maximum">
+    <xs:annotation>
+      <xs:documentation>The energy_range_minimum attribute indicates the
+        highest measured energy for the described
+        particle_type.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="particle:energy_range_maximum_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Energy" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="energy_range_minimum_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="energy_range_minimum">
+    <xs:annotation>
+      <xs:documentation>The energy_range_minimum attribute indicates the
+        lowest measured energy for the described
+        particle_type.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="particle:energy_range_minimum_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Energy" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ion_type">
+    <xs:annotation>
+      <xs:documentation>The ion_type attribute indicates the types of
+        ions measured.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="particle_measurement_type">
+    <xs:annotation>
+      <xs:documentation>The particle_measurement_type attribute
+        indicates the type of particle measurement
+        parameters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="particle_type">
+    <xs:annotation>
+      <xs:documentation>The particle_type attribute indicates the type
+        of particle being described.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
