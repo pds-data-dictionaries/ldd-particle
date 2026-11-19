@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.3.0 - Wed Nov 05 20:52:46 UTC 2025 -->
+  <!-- PDS4 Schematron for Name Space Id:particle  Version:2.0.3.0 - Thu Nov 19 22:38:49 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.21.0.0 - System Build 14.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -18,20 +18,6 @@
 		   <!--        lists. These two types of rules have been -->
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
-  <sch:pattern>
-    <sch:rule context="particle:Particle_Observation/particle:energy_range_maximum">
-      <sch:assert test="@unit = ('J', 'MeV', 'eV', 'keV')">
-        <title>particle:Particle_Observation/particle:energy_range_maximum/particle:energy_range_maximum</title>
-        The attribute @unit must be equal to one of the following values 'J', 'MeV', 'eV', 'keV'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="particle:Particle_Observation/particle:energy_range_minimum">
-      <sch:assert test="@unit = ('J', 'MeV', 'eV', 'keV')">
-        <title>particle:Particle_Observation/particle:energy_range_minimum/particle:energy_range_minimum</title>
-        The attribute @unit must be equal to one of the following values 'J', 'MeV', 'eV', 'keV'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
   <sch:pattern>
     <sch:rule context="particle:Particle_Parameter/particle:ion_type">
       <sch:assert test=". = ('Alpha', 'Heavy', 'Proton')">
