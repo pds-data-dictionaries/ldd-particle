@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model
-    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.sch"
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1R00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <!-- PDS4 Local Data Dictionary Ingest File -->
@@ -10,10 +10,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://pds.nasa.gov/pds4/pds/v1 
-        http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.xsd ">
+        http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1R00.xsd ">
 
 	<name>Particle</name>
-	<ldd_version_id>2.0.3.0</ldd_version_id>
+	<ldd_version_id>2.1.0.0</ldd_version_id>
 	<dictionary_type>Discipline</dictionary_type>
 	<full_name>Joseph Mafi</full_name>
 	<steward_id>ppi</steward_id>
@@ -47,6 +47,10 @@
 		2.0.3.0 (J. Mafi, 2025-07-11):
 		   - Added permissible value "Current" to 
 		     Particle_Observation/Particle_Parameter/particle_measurement_type
+		     
+		2.1.0.0 (J. Mafi, 2026-11-20):
+		   - Added Schematron rule to only allow the Particle_Parameter/ion_type
+		     attribute when Particle_Paramter/particle_type value is "Ions"
 	</comment>
 	<last_modification_date_time>2024-09-27T23:00:00Z</last_modification_date_time>
 
@@ -271,5 +275,15 @@
 		</DD_Association>
 		
 	</DD_Class>
-
+	
+	<DD_Rule>
+		<local_identifier>particle_parameter_ion_type</local_identifier>
+		<rule_context>particle:Particle_Observation/particle:Particle_Parameter</rule_context>
+		<DD_Rule_Statement>
+			<rule_type>Assert</rule_type>
+			<rule_test>if(not(particle:particle_type eq 'Ions')) then not(particle:ion_type) else true()</rule_test>
+			<rule_message>The attribute particle:ion_type is only allowed when the particle:particle_type value is "Ions".</rule_message>
+		</DD_Rule_Statement>
+	</DD_Rule>
+	
 </Ingest_LDD>
